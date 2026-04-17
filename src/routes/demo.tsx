@@ -73,8 +73,8 @@ function DemoPage() {
               <div className="mt-10 grid sm:grid-cols-3 gap-3">
                 {[
                   { icon: Mail, label: "Email", v: "hello@mandefied.com" },
-                  { icon: Phone, label: "Phone", v: "+234 (0) 800 000" },
-                  { icon: MapPin, label: "Office", v: "Ekiti, Nigeria" },
+                  { icon: Phone, label: "Phone", v: "+234 803 083 8906" },
+                  { icon: MapPin, label: "Office", v: "Ogun Tech Hub" },
                 ].map((c) => (
                   <div key={c.label} className="rounded-xl border border-border bg-card p-4">
                     <c.icon className="h-4 w-4 text-primary" />
