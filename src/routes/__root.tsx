@@ -29,20 +29,31 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Mandefied — The Operating System for Impact" },
+      {
+        name: "description",
+        content:
+          "Mandefied is a real-time monitoring & evaluation platform for governments, NGOs, and enterprises. Track performance, measure outcomes, generate funder-ready reports.",
+      },
+      { name: "author", content: "Mandefied" },
+      { property: "og:title", content: "Mandefied — The Operating System for Impact" },
+      {
+        property: "og:description",
+        content:
+          "Real-time M&E for governments, NGOs and enterprises. From data to decisions — track what matters, prove what works.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@Mandefied" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap",
       },
+      { rel: "stylesheet", href: appCss },
     ],
   }),
   shellComponent: RootShell,
