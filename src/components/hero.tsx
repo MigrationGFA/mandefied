@@ -16,7 +16,7 @@ export function Hero() {
 
           <h1 className="mt-7 text-5xl md:text-7xl font-semibold tracking-tight text-foreground leading-[1.05]">
             Turn projects into <br className="hidden md:block" />
-            <span className="text-gradient-primary">measurable impact.</span>
+            <span className="text-gradient-spectrum">measurable impact.</span>
           </h1>
 
           <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
