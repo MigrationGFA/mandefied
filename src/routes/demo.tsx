@@ -114,7 +114,7 @@ function DemoPage() {
 
                     <Button
                       type="submit"
-                      className="w-full h-12 text-base bg-gradient-primary hover:opacity-90 shadow-soft"
+                      className="w-full h-12 text-base bg-gradient-spectrum hover:opacity-90 shadow-glow text-white"
                     >
                       Request my demo
                     </Button>
