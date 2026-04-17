@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { BarChart3, Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github } from "lucide-react";
+import logo from "@/assets/mandefied-logo.png";
 
 export function SiteFooter() {
   return (
@@ -8,9 +9,14 @@ export function SiteFooter() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="col-span-2">
             <Link to="/" className="flex items-center gap-2">
-              <div className="h-9 w-9 rounded-xl bg-gradient-primary flex items-center justify-center">
-                <BarChart3 className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
-              </div>
+              <img
+                src={logo}
+                alt="Mandefied logo"
+                width={36}
+                height={36}
+                className="h-9 w-9 object-contain"
+                loading="lazy"
+              />
               <span className="text-lg font-semibold tracking-tight">Mandefied</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">

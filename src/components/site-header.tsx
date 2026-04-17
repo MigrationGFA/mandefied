@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, BarChart3 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/mandefied-logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -17,9 +18,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/75 border-b border-border/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="relative h-9 w-9 rounded-xl bg-gradient-primary flex items-center justify-center shadow-soft">
-            <BarChart3 className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
-          </div>
+          <img
+            src={logo}
+            alt="Mandefied logo"
+            width={36}
+            height={36}
+            className="h-9 w-9 object-contain"
+          />
           <span className="text-lg font-semibold tracking-tight">Mandefied</span>
         </Link>
 
