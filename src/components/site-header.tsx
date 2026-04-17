@@ -47,7 +47,7 @@ export function SiteHeader() {
             <Button variant="ghost" size="sm">Sign in</Button>
           </Link>
           <Link to="/demo">
-            <Button size="sm" className="bg-gradient-primary hover:opacity-90 shadow-soft">
+            <Button size="sm" className="bg-gradient-spectrum hover:opacity-90 shadow-soft text-white">
               Request a Demo
             </Button>
           </Link>
@@ -76,7 +76,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link to="/demo" onClick={() => setOpen(false)} className="mt-2">
-              <Button className="w-full bg-gradient-primary">Request a Demo</Button>
+              <Button className="w-full bg-gradient-spectrum text-white">Request a Demo</Button>
             </Link>
           </div>
         </div>

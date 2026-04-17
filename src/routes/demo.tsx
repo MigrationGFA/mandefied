@@ -114,7 +114,7 @@ function DemoPage() {
 
                     <Button
                       type="submit"
-                      className="w-full h-12 text-base bg-gradient-primary hover:opacity-90 shadow-soft"
+                      className="w-full h-12 text-base bg-gradient-spectrum hover:opacity-90 shadow-glow text-white"
                     >
                       Request my demo
                     </Button>
@@ -135,6 +135,32 @@ function DemoPage() {
                   </div>
                 )}
               </div>
+            </div>
+          </div>
+        </Section>
+
+        {/* FAQ */}
+        <Section className="pt-0">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-semibold tracking-tight text-center">
+              Questions teams ask <span className="text-gradient-warm">before booking</span>
+            </h2>
+            <div className="mt-10 space-y-3">
+              {[
+                { q: "How long does the demo take?", a: "30 minutes. We spend the first 5 understanding your program, then walk you through a live dashboard mapped to your sector." },
+                { q: "Do I need to prepare anything?", a: "No. Bring questions. If you have an existing logframe or indicator list, share it ahead and we'll mock it inside Mandefied for the call." },
+                { q: "Can Mandefied match our donor's report template (e.g. AfDB)?", a: "Yes. Mandefied ships AfDB and SDG-aligned templates out of the box, and we configure custom donor templates during onboarding." },
+                { q: "What about offline / low-connectivity field sites?", a: "Field officers collect data fully offline on mobile. The app syncs automatically the moment connectivity returns — with full audit trail intact." },
+                { q: "How quickly can we go live?", a: "Most teams run a first program in 2–4 weeks, including logframe setup, indicator configuration, and field officer training." },
+              ].map((f) => (
+                <details key={f.q} className="group rounded-xl border border-border bg-card p-5 open:shadow-soft transition-shadow">
+                  <summary className="cursor-pointer list-none flex items-center justify-between font-semibold text-foreground">
+                    <span>{f.q}</span>
+                    <span className="ml-4 h-7 w-7 rounded-full bg-gradient-to-br from-[oklch(0.5_0.24_260)] to-[oklch(0.62_0.24_350)] text-white flex items-center justify-center text-sm transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{f.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </Section>
