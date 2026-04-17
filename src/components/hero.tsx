@@ -1,0 +1,67 @@
+import { Link } from "@tanstack/react-router";
+import { ArrowRight, PlayCircle, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import dashboardImg from "@/assets/dashboard-hero.jpg";
+
+export function Hero() {
+  return (
+    <section className="relative overflow-hidden bg-mesh">
+      <div className="absolute inset-0 grid-pattern opacity-40" aria-hidden />
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
+        <div className="mx-auto max-w-4xl text-center animate-fade-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 backdrop-blur px-3.5 py-1.5 text-xs font-medium shadow-soft">
+            <Sparkles className="h-3.5 w-3.5 text-accent" />
+            <span className="text-muted-foreground">Powering Ekiti Knowledge Zone & AfDB-grade reporting</span>
+          </div>
+
+          <h1 className="mt-7 text-5xl md:text-7xl font-semibold tracking-tight text-foreground leading-[1.05]">
+            Turn projects into <br className="hidden md:block" />
+            <span className="text-gradient-primary">measurable impact.</span>
+          </h1>
+
+          <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            Mandefied is a real-time monitoring & evaluation platform that helps
+            governments, NGOs, and enterprises track performance, measure outcomes,
+            and generate funder-ready reports.
+          </p>
+
+          <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link to="/demo">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 shadow-elegant h-12 px-6 text-base">
+                Request a Demo <ArrowRight className="ml-1 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link to="/how-it-works">
+              <Button size="lg" variant="outline" className="h-12 px-6 text-base bg-card/50 backdrop-blur">
+                <PlayCircle className="mr-2 h-4 w-4" /> See how it works
+              </Button>
+            </Link>
+          </div>
+
+          <p className="mt-6 text-xs text-muted-foreground">
+            No credit card required · Free 30-min strategy call · SDG aligned
+          </p>
+        </div>
+
+        <div className="relative mt-16 md:mt-20 mx-auto max-w-6xl animate-fade-up [animation-delay:200ms]">
+          <div className="absolute -inset-x-20 -top-10 h-72 bg-gradient-primary opacity-20 blur-3xl rounded-full" aria-hidden />
+          <div className="relative rounded-2xl border border-border bg-card shadow-dramatic overflow-hidden">
+            <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border bg-surface">
+              <span className="h-3 w-3 rounded-full bg-destructive/60" />
+              <span className="h-3 w-3 rounded-full bg-warning/70" />
+              <span className="h-3 w-3 rounded-full bg-success/70" />
+              <span className="ml-3 text-xs text-muted-foreground font-mono">app.mandefied.com/dashboard</span>
+            </div>
+            <img
+              src={dashboardImg}
+              alt="Mandefied real-time dashboard with KPIs, charts, and project map"
+              width={1600}
+              height={1100}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
