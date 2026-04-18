@@ -1,7 +1,25 @@
+import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, PlayCircle, Sparkles } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import dashboardImg from "@/assets/dashboard-hero.jpg";
+import indicatorsImg from "@/assets/dashboard-indicators.jpg";
+import fieldmapImg from "@/assets/dashboard-fieldmap.jpg";
+import reportsImg from "@/assets/dashboard-reports.jpg";
+
+const SLIDES = [
+  { src: dashboardImg, alt: "Mandefied real-time dashboard with KPIs, charts, and project map", label: "Overview" },
+  { src: indicatorsImg, alt: "Indicator and KPI tracking against targets with SDG alignment", label: "Indicators" },
+  { src: fieldmapImg, alt: "Live field officer submissions on a regional activity map", label: "Field Activity" },
+  { src: reportsImg, alt: "Auto-generated funder-ready reports in AfDB format", label: "Reports" },
+];
 
 export function Hero() {
   return (
