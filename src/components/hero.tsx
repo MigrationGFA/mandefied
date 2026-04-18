@@ -1,7 +1,25 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, PlayCircle, Sparkles } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import dashboardImg from "@/assets/dashboard-hero.jpg";
+import indicatorsImg from "@/assets/dashboard-indicators.jpg";
+import fieldmapImg from "@/assets/dashboard-fieldmap.jpg";
+import reportsImg from "@/assets/dashboard-reports.jpg";
+
+const SLIDES = [
+  { src: dashboardImg, alt: "Mandefied real-time dashboard with KPIs, charts, and project map", label: "Overview" },
+  { src: indicatorsImg, alt: "Indicator and KPI tracking against targets with SDG alignment", label: "Indicators" },
+  { src: fieldmapImg, alt: "Live field officer submissions on a regional activity map", label: "Field Activity" },
+  { src: reportsImg, alt: "Auto-generated funder-ready reports in AfDB format", label: "Reports" },
+];
 
 export function Hero() {
   return (
@@ -52,16 +70,69 @@ export function Hero() {
               <span className="h-3 w-3 rounded-full bg-success/70" />
               <span className="ml-3 text-xs text-muted-foreground font-mono">app.mandefied.com/dashboard</span>
             </div>
-            <img
-              src={dashboardImg}
-              alt="Mandefied real-time dashboard with KPIs, charts, and project map"
-              width={1600}
-              height={1100}
-              className="w-full h-auto"
-            />
+            <HeroCarousel />
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function HeroCarousel() {
+  const autoplay = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  );
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+    const onSelect = () => setSelected(api.selectedScrollSnap());
+    onSelect();
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
+  return (
+    <div className="relative">
+      <Carousel
+        opts={{ loop: true, align: "start" }}
+        plugins={[autoplay.current]}
+        setApi={setApi}
+        className="w-full"
+      >
+        <CarouselContent className="ml-0">
+          {SLIDES.map((s) => (
+            <CarouselItem key={s.label} className="pl-0 basis-full">
+              <img
+                src={s.src}
+                alt={s.alt}
+                width={1600}
+                height={1100}
+                loading="lazy"
+                className="w-full h-auto block"
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+
+      <div className="absolute top-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-card/90 backdrop-blur px-2.5 py-1.5 border border-border shadow-soft">
+        {SLIDES.map((s, i) => (
+          <button
+            key={s.label}
+            type="button"
+            aria-label={`Show ${s.label}`}
+            onClick={() => api?.scrollTo(i)}
+            className={`h-1.5 rounded-full transition-all ${
+              selected === i ? "w-6 bg-gradient-spectrum" : "w-1.5 bg-muted-foreground/40 hover:bg-muted-foreground/60"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
