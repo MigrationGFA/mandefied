@@ -6,6 +6,7 @@ import { UseCases } from "@/components/use-cases-grid";
 import { CtaBanner } from "@/components/cta-banner";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Quote } from "lucide-react";
+import dayoImg from "@/assets/testimonial-dayo.jpg";
 
 export const Route = createFileRoute("/use-cases")({
   head: () => ({
@@ -66,11 +67,15 @@ const stories = [
 const testimonials = [
   {
     q: "What used to be a three-week reporting scramble now takes us a single afternoon. Our M&E officers can finally focus on insight, not data wrangling.",
-    a: "Program Director, Development Agency",
+    name: "Dayo Adeoye",
+    role: "Programme Director, Ekiti Knowledge Zone",
+    img: dayoImg,
   },
   {
     q: "We finally trust the numbers. Every single value on our dashboard is traceable back to a field officer, a GPS pin, and a timestamp.",
-    a: "Head of M&E, Public Sector Program",
+    name: "Head of M&E",
+    role: "Public Sector Development Programme",
+    img: null,
   },
 ];
 
@@ -126,7 +131,24 @@ function UseCasesPage() {
               <div key={i} className="relative rounded-2xl border border-border bg-card p-8 shadow-soft">
                 <Quote className="absolute top-6 right-6 h-10 w-10 text-primary/15" />
                 <p className="text-lg leading-relaxed text-foreground">"{t.q}"</p>
-                <p className="mt-6 text-sm font-medium text-muted-foreground">— {t.a}</p>
+                <div className="mt-6 flex items-center gap-3">
+                  {t.img ? (
+                    <img
+                      src={t.img}
+                      alt={`${t.name}, ${t.role}`}
+                      width={48}
+                      height={48}
+                      loading="lazy"
+                      className="h-12 w-12 rounded-full object-cover ring-2 ring-border"
+                    />
+                  ) : (
+                    <div className="h-12 w-12 rounded-full bg-gradient-spectrum" aria-hidden />
+                  )}
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{t.name}</p>
+                    <p className="text-xs text-muted-foreground">{t.role}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
