@@ -89,7 +89,7 @@ export function FeaturesGrid() {
             className="group relative rounded-2xl border border-border bg-card p-6 hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 overflow-hidden"
           >
             <div
-              className={`h-11 w-11 rounded-xl bg-gradient-to-br ${toneStyles[f.tone]} flex items-center justify-center text-white shadow-soft`}
+              className={`h-11 w-11 rounded-xl bg-linear-to-br ${toneStyles[f.tone]} flex items-center justify-center text-white shadow-soft`}
             >
               <f.icon className="h-5 w-5" strokeWidth={2.25} />
             </div>
