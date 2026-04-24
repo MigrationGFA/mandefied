@@ -5,11 +5,16 @@ import viteReact from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  // Ensure assets are referenced relative to the root
+  base: "/",
   plugins: [
     tanstackStart(),
     nitro({
-      // This is where we tell Nitro to build for Vercel
       preset: "vercel",
+      // This ensures Nitro handles the public assets correctly for Vercel
+      output: {
+        publicDir: path.resolve(__dirname, ".vercel/output/static"),
+      },
     }),
     viteReact(),
   ],
