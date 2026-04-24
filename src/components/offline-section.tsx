@@ -13,20 +13,37 @@ export function OfflineSection() {
             <WifiOff className="h-3.5 w-3.5" /> Differentiator
           </div>
           <h2 className="mt-5 text-3xl md:text-5xl font-semibold tracking-tight">
-            Built for the real world — <span className="text-gradient-primary">even without internet.</span>
+            Built for the real world —{" "}
+            <span className="text-gradient-primary">even without internet.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Field officers in remote areas can collect, photograph, and verify data
-            on a mobile device with zero connectivity. The moment they're back online,
-            everything syncs — encrypted, attributed, and audit-ready.
+            Field officers in remote areas can collect, photograph, and verify data on a mobile
+            device with zero connectivity. The moment they're back online, everything syncs —
+            encrypted, attributed, and audit-ready.
           </p>
 
           <div className="mt-8 space-y-4">
             {[
-              { icon: WifiOff, t: "Works fully offline", d: "Forms, validation, and history available with no signal." },
-              { icon: Cloud, t: "Auto-sync on reconnect", d: "Conflict-resolved, encrypted, and queued in the background." },
-              { icon: Fingerprint, t: "Offline PIN + device binding", d: "Authenticated submissions even when no network is available." },
-              { icon: ShieldCheck, t: "Token-based industry standard", d: "OAuth 2.0 / JWT for online sessions and integrations." },
+              {
+                icon: WifiOff,
+                t: "Works fully offline",
+                d: "Forms, validation, and history available with no signal.",
+              },
+              {
+                icon: Cloud,
+                t: "Auto-sync on reconnect",
+                d: "Conflict-resolved, encrypted, and queued in the background.",
+              },
+              {
+                icon: Fingerprint,
+                t: "Offline PIN + device binding",
+                d: "Authenticated submissions even when no network is available.",
+              },
+              {
+                icon: ShieldCheck,
+                t: "Token-based industry standard",
+                d: "OAuth 2.0 / JWT for online sessions and integrations.",
+              },
             ].map((it) => (
               <div key={it.t} className="flex gap-4">
                 <div className="h-10 w-10 rounded-lg bg-card border border-border flex items-center justify-center text-primary shrink-0">
@@ -50,7 +67,10 @@ export function OfflineSection() {
         </div>
 
         <div className="relative">
-          <div className="absolute -inset-8 bg-gradient-accent opacity-20 blur-3xl rounded-full" aria-hidden />
+          <div
+            className="absolute -inset-8 bg-gradient-accent opacity-20 blur-3xl rounded-full"
+            aria-hidden
+          />
           <div className="relative rounded-3xl border border-border bg-card p-6 shadow-elegant">
             <img
               src={mobileImg}

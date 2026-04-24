@@ -33,12 +33,13 @@ export function TrustBar() {
           </div>
           <div>
             <p className="text-base md:text-lg text-foreground leading-relaxed">
-              Mandefied powers the <strong>Ekiti Knowledge Zone</strong> — managing
-              large-scale economic development programs, tracking indicators across
-              dozens of work-streams, and producing donor-ready reports for partners
-              like the African Development Bank.
+              Mandefied powers the <strong>Ekiti Knowledge Zone</strong> — managing large-scale
+              economic development programs, tracking indicators across dozens of work-streams, and
+              producing donor-ready reports for partners like the African Development Bank.
             </p>
-            <p className="mt-3 text-sm text-muted-foreground">Live deployment · Government & donor reporting</p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Live deployment · Government & donor reporting
+            </p>
           </div>
         </div>
       </div>

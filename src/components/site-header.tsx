@@ -34,7 +34,9 @@ export function SiteHeader() {
               key={n.to}
               to={n.to}
               className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md"
-              activeProps={{ className: "px-3 py-2 text-sm font-medium text-foreground rounded-md" }}
+              activeProps={{
+                className: "px-3 py-2 text-sm font-medium text-foreground rounded-md",
+              }}
               activeOptions={{ exact: n.to === "/" }}
             >
               {n.label}
@@ -44,10 +46,15 @@ export function SiteHeader() {
 
         <div className="hidden md:flex items-center gap-2">
           <Link to="/demo">
-            <Button variant="ghost" size="sm">Sign in</Button>
+            <Button variant="ghost" size="sm">
+              Sign in
+            </Button>
           </Link>
           <Link to="/demo">
-            <Button size="sm" className="bg-gradient-spectrum hover:opacity-90 shadow-soft text-white">
+            <Button
+              size="sm"
+              className="bg-gradient-spectrum hover:opacity-90 shadow-soft text-white"
+            >
               Request a Demo
             </Button>
           </Link>

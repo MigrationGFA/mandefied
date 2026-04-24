@@ -44,7 +44,12 @@ export function HowItWorks() {
     <Section id="how" className="bg-surface">
       <SectionHeading
         eyebrow="The full loop"
-        title={<>From <span className="text-gradient-spectrum">data to decisions</span>, in five clear steps.</>}
+        title={
+          <>
+            From <span className="text-gradient-spectrum">data to decisions</span>, in five clear
+            steps.
+          </>
+        }
         description="One continuous workflow connects field officers, M&E teams, and decision-makers — without spreadsheets, email chains, or lost evidence."
       />
 
@@ -56,10 +61,14 @@ export function HowItWorks() {
             style={{ animationDelay: `${i * 80}ms` }}
           >
             <div className="flex items-center justify-between">
-              <div className={`h-11 w-11 rounded-xl bg-gradient-to-br ${s.tone} flex items-center justify-center text-white shadow-soft group-hover:scale-110 transition-transform`}>
+              <div
+                className={`h-11 w-11 rounded-xl bg-gradient-to-br ${s.tone} flex items-center justify-center text-white shadow-soft group-hover:scale-110 transition-transform`}
+              >
                 <s.icon className="h-5 w-5" strokeWidth={2.25} />
               </div>
-              <span className="text-xs font-mono font-semibold text-muted-foreground/60">{s.n}</span>
+              <span className="text-xs font-mono font-semibold text-muted-foreground/60">
+                {s.n}
+              </span>
             </div>
             <div>
               <h3 className="text-base font-semibold text-foreground">{s.title}</h3>
@@ -67,7 +76,13 @@ export function HowItWorks() {
             </div>
             {i < steps.length - 1 && (
               <div className="hidden md:block absolute top-10 -right-3 z-10 h-6 w-6 rounded-full bg-card border border-border items-center justify-center text-muted-foreground">
-                <svg viewBox="0 0 24 24" className="h-full w-full p-1" fill="none" stroke="currentColor" strokeWidth={2}>
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-full w-full p-1"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </div>

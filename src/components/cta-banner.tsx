@@ -17,17 +17,24 @@ export function CtaBanner() {
               See Mandefied in action.
             </h2>
             <p className="mt-5 text-lg text-primary-foreground/85 leading-relaxed">
-              Book a personalized 30-minute demo. We'll show you a live dashboard
-              tailored to your program and answer every question your team has.
+              Book a personalized 30-minute demo. We'll show you a live dashboard tailored to your
+              program and answer every question your team has.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Link to="/demo">
-                <Button size="lg" className="h-12 px-6 text-base bg-card text-foreground hover:bg-card/90 shadow-elegant">
+                <Button
+                  size="lg"
+                  className="h-12 px-6 text-base bg-card text-foreground hover:bg-card/90 shadow-elegant"
+                >
                   Request a Demo <ArrowRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
               <Link to="/how-it-works">
-                <Button size="lg" variant="ghost" className="h-12 px-6 text-base text-primary-foreground hover:bg-primary-foreground/10">
+                <Button
+                  size="lg"
+                  variant="ghost"
+                  className="h-12 px-6 text-base text-primary-foreground hover:bg-primary-foreground/10"
+                >
                   See how it works
                 </Button>
               </Link>

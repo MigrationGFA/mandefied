@@ -59,13 +59,33 @@ const pillars = [
 
 const comparison = [
   { capability: "Logframe & results framework builder", us: true, sheets: false, generic: false },
-  { capability: "Offline-capable mobile data collection", us: true, sheets: false, generic: "Limited" },
+  {
+    capability: "Offline-capable mobile data collection",
+    us: true,
+    sheets: false,
+    generic: "Limited",
+  },
   { capability: "Real-time indicator roll-ups", us: true, sheets: false, generic: "Limited" },
   { capability: "AfDB / SDG-aligned report templates", us: true, sheets: false, generic: false },
   { capability: "Multi-tier M&E approval workflow", us: true, sheets: false, generic: false },
-  { capability: "Immutable audit trail per indicator value", us: true, sheets: false, generic: "Limited" },
-  { capability: "Role-based access for officers, supervisors, donors", us: true, sheets: false, generic: true },
-  { capability: "Configurable per program (no rebuild)", us: true, sheets: "Manual", generic: false },
+  {
+    capability: "Immutable audit trail per indicator value",
+    us: true,
+    sheets: false,
+    generic: "Limited",
+  },
+  {
+    capability: "Role-based access for officers, supervisors, donors",
+    us: true,
+    sheets: false,
+    generic: true,
+  },
+  {
+    capability: "Configurable per program (no rebuild)",
+    us: true,
+    sheets: "Manual",
+    generic: false,
+  },
 ];
 
 function FeaturesPage() {
@@ -76,12 +96,20 @@ function FeaturesPage() {
         <Section className="bg-mesh pt-20 pb-12">
           <SectionHeading
             eyebrow="Capabilities"
-            title={<>One platform. <span className="text-gradient-spectrum">Every M&E capability</span> you'll ever need.</>}
+            title={
+              <>
+                One platform. <span className="text-gradient-spectrum">Every M&E capability</span>{" "}
+                you'll ever need.
+              </>
+            }
             description="Mandefied brings the entire monitoring & evaluation lifecycle under one roof — purpose-built for the realities of donor-funded, multi-stakeholder programs."
           />
           <div className="mt-10 flex justify-center">
             <Link to="/demo">
-              <Button size="lg" className="bg-gradient-spectrum hover:opacity-90 shadow-glow h-12 px-7 text-base text-white">
+              <Button
+                size="lg"
+                className="bg-gradient-spectrum hover:opacity-90 shadow-glow h-12 px-7 text-base text-white"
+              >
                 See it on your data <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>
@@ -92,8 +120,13 @@ function FeaturesPage() {
         <Section className="py-12 md:py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {pillars.map((p) => (
-              <div key={p.title} className="rounded-2xl border border-border bg-card p-7 hover:shadow-elegant transition-shadow">
-                <div className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${p.tone} flex items-center justify-center text-white shadow-soft`}>
+              <div
+                key={p.title}
+                className="rounded-2xl border border-border bg-card p-7 hover:shadow-elegant transition-shadow"
+              >
+                <div
+                  className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${p.tone} flex items-center justify-center text-white shadow-soft`}
+                >
                   <p.icon className="h-6 w-6" strokeWidth={2} />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold">{p.title}</h3>
@@ -109,7 +142,11 @@ function FeaturesPage() {
         <Section className="bg-surface">
           <SectionHeading
             eyebrow="The honest comparison"
-            title={<>Why teams switch <span className="text-gradient-warm">to Mandefied</span></>}
+            title={
+              <>
+                Why teams switch <span className="text-gradient-warm">to Mandefied</span>
+              </>
+            }
             description="Most M&E teams arrive from spreadsheets, KoboToolbox + Excel, or a generic project tracker bolted onto BI. Here's what changes."
           />
           <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-card shadow-soft">
@@ -118,9 +155,15 @@ function FeaturesPage() {
                 <thead>
                   <tr className="border-b border-border bg-surface text-left">
                     <th className="px-6 py-4 font-semibold">Capability</th>
-                    <th className="px-6 py-4 font-semibold text-center bg-gradient-to-b from-primary/5 to-transparent">Mandefied</th>
-                    <th className="px-6 py-4 font-semibold text-center text-muted-foreground">Spreadsheets</th>
-                    <th className="px-6 py-4 font-semibold text-center text-muted-foreground">Generic PM tools</th>
+                    <th className="px-6 py-4 font-semibold text-center bg-gradient-to-b from-primary/5 to-transparent">
+                      Mandefied
+                    </th>
+                    <th className="px-6 py-4 font-semibold text-center text-muted-foreground">
+                      Spreadsheets
+                    </th>
+                    <th className="px-6 py-4 font-semibold text-center text-muted-foreground">
+                      Generic PM tools
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -130,8 +173,12 @@ function FeaturesPage() {
                       <td className="px-6 py-4 text-center">
                         <Cell value={row.us} positive />
                       </td>
-                      <td className="px-6 py-4 text-center"><Cell value={row.sheets} /></td>
-                      <td className="px-6 py-4 text-center"><Cell value={row.generic} /></td>
+                      <td className="px-6 py-4 text-center">
+                        <Cell value={row.sheets} />
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        <Cell value={row.generic} />
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -153,7 +200,9 @@ function FeaturesPage() {
 function Cell({ value, positive }: { value: boolean | string; positive?: boolean }) {
   if (value === true) {
     return (
-      <span className={`inline-flex h-7 w-7 items-center justify-center rounded-full ${positive ? "bg-gradient-to-br from-[oklch(0.42_0.14_155)] to-[oklch(0.78_0.22_140)] text-white" : "bg-success/15 text-success"}`}>
+      <span
+        className={`inline-flex h-7 w-7 items-center justify-center rounded-full ${positive ? "bg-gradient-to-br from-[oklch(0.42_0.14_155)] to-[oklch(0.78_0.22_140)] text-white" : "bg-success/15 text-success"}`}
+      >
         <Check className="h-4 w-4" strokeWidth={3} />
       </span>
     );

@@ -74,7 +74,11 @@ export function FeaturesGrid() {
     <Section>
       <SectionHeading
         eyebrow="Capabilities"
-        title={<>Everything you need to <span className="text-gradient-spectrum">prove impact</span>.</>}
+        title={
+          <>
+            Everything you need to <span className="text-gradient-spectrum">prove impact</span>.
+          </>
+        }
         description="A complete M&E stack — purpose-built for the realities of field-driven, donor-funded, multi-stakeholder programs."
       />
 
@@ -84,12 +88,16 @@ export function FeaturesGrid() {
             key={f.title}
             className="group relative rounded-2xl border border-border bg-card p-6 hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 overflow-hidden"
           >
-            <div className={`h-11 w-11 rounded-xl bg-gradient-to-br ${toneStyles[f.tone]} flex items-center justify-center text-white shadow-soft`}>
+            <div
+              className={`h-11 w-11 rounded-xl bg-gradient-to-br ${toneStyles[f.tone]} flex items-center justify-center text-white shadow-soft`}
+            >
               <f.icon className="h-5 w-5" strokeWidth={2.25} />
             </div>
             <h3 className="mt-5 text-base font-semibold text-foreground">{f.title}</h3>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.body}</p>
-            <div className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${toneStyles[f.tone]} opacity-0 group-hover:opacity-100 transition-opacity`} />
+            <div
+              className={`absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r ${toneStyles[f.tone]} opacity-0 group-hover:opacity-100 transition-opacity`}
+            />
           </div>
         ))}
       </div>

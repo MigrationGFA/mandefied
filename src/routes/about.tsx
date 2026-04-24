@@ -69,7 +69,11 @@ function AboutPage() {
         <Section className="bg-mesh pt-20 pb-8">
           <SectionHeading
             eyebrow="About Mandefied"
-            title={<>The <span className="text-gradient-spectrum">operating system</span> for impact.</>}
+            title={
+              <>
+                The <span className="text-gradient-spectrum">operating system</span> for impact.
+              </>
+            }
             description="We built Mandefied because the world's most important programs were still being managed in spreadsheets. Decisions worth millions — and lives — deserved better."
           />
         </Section>
@@ -78,7 +82,10 @@ function AboutPage() {
         <Section>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-spectrum opacity-15 blur-3xl rounded-full" aria-hidden />
+              <div
+                className="absolute -inset-4 bg-gradient-spectrum opacity-15 blur-3xl rounded-full"
+                aria-hidden
+              />
               <img
                 src={fieldImg}
                 alt="Field officer using Mandefied for offline data collection"
@@ -89,19 +96,21 @@ function AboutPage() {
               />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">From the field. <span className="text-gradient-warm">For the field.</span></h2>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+                From the field. <span className="text-gradient-warm">For the field.</span>
+              </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
                 Mandefied powers project tracking and reporting for the
-                <strong className="text-foreground"> Ekiti Knowledge Zone</strong> — managing large-scale economic development
-                programs, tracking indicators across multiple work-streams, and
-                producing donor-ready reports for partners like the
+                <strong className="text-foreground"> Ekiti Knowledge Zone</strong> — managing
+                large-scale economic development programs, tracking indicators across multiple
+                work-streams, and producing donor-ready reports for partners like the
                 <strong className="text-foreground"> African Development Bank</strong>.
               </p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Every feature we ship is shaped by what field officers, M&E leads,
-                program directors, and funders actually need — not what looks good
-                in a slide deck. We sit with our customers, in their offices and
-                their field sites, until we understand the work.
+                Every feature we ship is shaped by what field officers, M&E leads, program
+                directors, and funders actually need — not what looks good in a slide deck. We sit
+                with our customers, in their offices and their field sites, until we understand the
+                work.
               </p>
 
               <div className="mt-8 grid grid-cols-2 gap-4">
@@ -120,13 +129,22 @@ function AboutPage() {
         <Section className="bg-surface">
           <SectionHeading
             eyebrow="What we believe"
-            title={<>Four principles, <span className="text-gradient-spectrum">no shortcuts</span></>}
+            title={
+              <>
+                Four principles, <span className="text-gradient-spectrum">no shortcuts</span>
+              </>
+            }
             description="The values that decide what we build, who we hire, and what we refuse to ship."
           />
           <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map((v) => (
-              <div key={v.title} className="rounded-2xl border border-border bg-card p-7 hover:-translate-y-1 hover:shadow-elegant transition-all">
-                <div className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${v.tone} flex items-center justify-center text-white shadow-soft`}>
+              <div
+                key={v.title}
+                className="rounded-2xl border border-border bg-card p-7 hover:-translate-y-1 hover:shadow-elegant transition-all"
+              >
+                <div
+                  className={`h-12 w-12 rounded-2xl bg-gradient-to-br ${v.tone} flex items-center justify-center text-white shadow-soft`}
+                >
                   <v.icon className="h-6 w-6" strokeWidth={2} />
                 </div>
                 <h3 className="mt-5 text-base font-semibold">{v.title}</h3>
@@ -144,15 +162,29 @@ function AboutPage() {
               Built at <span className="text-gradient-warm">Ogun Tech Hub</span>
             </h3>
             <p className="mt-5 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Talk to a real human about your program. We answer every demo request within one business day.
+              Talk to a real human about your program. We answer every demo request within one
+              business day.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center text-sm">
-              <a href="tel:+2348030838906" className="text-foreground hover:text-primary transition-colors">📞 +234 803 083 8906</a>
+              <a
+                href="tel:+2348030838906"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                📞 +234 803 083 8906
+              </a>
               <span className="hidden sm:inline text-border">·</span>
-              <a href="mailto:hello@mandefied.com" className="text-foreground hover:text-primary transition-colors">✉ hello@mandefied.com</a>
+              <a
+                href="mailto:hello@mandefied.com"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                ✉ hello@mandefied.com
+              </a>
             </div>
             <Link to="/demo" className="inline-block mt-8">
-              <Button size="lg" className="bg-gradient-spectrum hover:opacity-90 shadow-glow h-12 px-7 text-base text-white">
+              <Button
+                size="lg"
+                className="bg-gradient-spectrum hover:opacity-90 shadow-glow h-12 px-7 text-base text-white"
+              >
                 Request a demo <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>

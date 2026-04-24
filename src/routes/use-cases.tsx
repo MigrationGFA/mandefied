@@ -87,7 +87,12 @@ function UseCasesPage() {
         <Section className="bg-mesh pt-20 pb-8">
           <SectionHeading
             eyebrow="Industries"
-            title={<>Built for the people who <span className="text-gradient-spectrum">deliver change</span>.</>}
+            title={
+              <>
+                Built for the people who{" "}
+                <span className="text-gradient-spectrum">deliver change</span>.
+              </>
+            }
             description="Mandefied is in production today across public sector, donor-funded development, and enterprise programs. Here's how teams use it."
           />
         </Section>
@@ -98,23 +103,38 @@ function UseCasesPage() {
         <Section className="bg-surface">
           <SectionHeading
             eyebrow="In production"
-            title={<>Real programs. <span className="text-gradient-warm">Real results.</span></>}
+            title={
+              <>
+                Real programs. <span className="text-gradient-warm">Real results.</span>
+              </>
+            }
             description="A snapshot of how organizations use Mandefied in the field today."
           />
 
           <div className="mt-16 grid lg:grid-cols-3 gap-5">
             {stories.map((s) => (
-              <div key={s.title} className="relative rounded-2xl border border-border bg-card overflow-hidden hover:-translate-y-1 hover:shadow-elegant transition-all">
+              <div
+                key={s.title}
+                className="relative rounded-2xl border border-border bg-card overflow-hidden hover:-translate-y-1 hover:shadow-elegant transition-all"
+              >
                 <div className={`h-2 w-full bg-gradient-to-r ${s.tone}`} />
                 <div className="p-7">
-                  <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">{s.sector}</p>
+                  <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
+                    {s.sector}
+                  </p>
                   <h3 className="mt-2 text-xl font-semibold">{s.title}</h3>
                   <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
                   <div className="mt-6 grid grid-cols-3 gap-3 pt-5 border-t border-border">
                     {s.metrics.map((m) => (
                       <div key={m.k}>
-                        <p className={`text-xl font-semibold bg-gradient-to-br ${s.tone} bg-clip-text text-transparent`}>{m.v}</p>
-                        <p className="mt-1 text-[11px] text-muted-foreground leading-tight">{m.k}</p>
+                        <p
+                          className={`text-xl font-semibold bg-gradient-to-br ${s.tone} bg-clip-text text-transparent`}
+                        >
+                          {m.v}
+                        </p>
+                        <p className="mt-1 text-[11px] text-muted-foreground leading-tight">
+                          {m.k}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -128,7 +148,10 @@ function UseCasesPage() {
         <Section>
           <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
-              <div key={i} className="relative rounded-2xl border border-border bg-card p-8 shadow-soft">
+              <div
+                key={i}
+                className="relative rounded-2xl border border-border bg-card p-8 shadow-soft"
+              >
                 <Quote className="absolute top-6 right-6 h-10 w-10 text-primary/15" />
                 <p className="text-lg leading-relaxed text-foreground">"{t.q}"</p>
                 <div className="mt-6 flex items-center gap-3">
@@ -155,7 +178,10 @@ function UseCasesPage() {
 
           <div className="mt-14 text-center">
             <Link to="/demo">
-              <Button size="lg" className="bg-gradient-spectrum hover:opacity-90 shadow-glow h-12 px-7 text-base text-white">
+              <Button
+                size="lg"
+                className="bg-gradient-spectrum hover:opacity-90 shadow-glow h-12 px-7 text-base text-white"
+              >
                 Bring Mandefied to your program <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>

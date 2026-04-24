@@ -20,8 +20,8 @@ export function SiteFooter() {
               <span className="text-lg font-semibold tracking-tight">Mandefied</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
-              The operating system for impact. Real-time monitoring & evaluation
-              for governments, NGOs, and enterprises.
+              The operating system for impact. Real-time monitoring & evaluation for governments,
+              NGOs, and enterprises.
             </p>
             <div className="mt-6 flex items-center gap-3">
               {[Linkedin, Twitter, Github].map((Icon, i) => (
@@ -37,21 +37,30 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <FooterCol title="Product" links={[
-            { to: "/features", label: "Features" },
-            { to: "/how-it-works", label: "How it works" },
-            { to: "/use-cases", label: "Use cases" },
-            { to: "/demo", label: "Request a demo" },
-          ]} />
-          <FooterCol title="Company" links={[
-            { to: "/about", label: "About" },
-            { to: "/demo", label: "Contact" },
-          ]} />
-          <FooterCol title="Resources" links={[
-            { to: "/features", label: "Reporting" },
-            { to: "/features", label: "Compliance" },
-            { to: "/use-cases", label: "Industries" },
-          ]} />
+          <FooterCol
+            title="Product"
+            links={[
+              { to: "/features", label: "Features" },
+              { to: "/how-it-works", label: "How it works" },
+              { to: "/use-cases", label: "Use cases" },
+              { to: "/demo", label: "Request a demo" },
+            ]}
+          />
+          <FooterCol
+            title="Company"
+            links={[
+              { to: "/about", label: "About" },
+              { to: "/demo", label: "Contact" },
+            ]}
+          />
+          <FooterCol
+            title="Resources"
+            links={[
+              { to: "/features", label: "Reporting" },
+              { to: "/features", label: "Compliance" },
+              { to: "/use-cases", label: "Industries" },
+            ]}
+          />
         </div>
 
         <div className="mt-14 pt-8 border-t border-border flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -74,7 +83,10 @@ function FooterCol({ title, links }: { title: string; links: { to: string; label
       <ul className="mt-4 space-y-3">
         {links.map((l) => (
           <li key={l.label}>
-            <Link to={l.to} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              to={l.to}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               {l.label}
             </Link>
           </li>

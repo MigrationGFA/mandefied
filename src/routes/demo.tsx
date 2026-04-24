@@ -51,9 +51,8 @@ function DemoPage() {
                 See <span className="text-gradient-primary">Mandefied</span> in action.
               </h1>
               <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-                Book a 30-minute demo tailored to your program. We'll show you a
-                live dashboard, walk through offline collection, and answer every
-                question your team has.
+                Book a 30-minute demo tailored to your program. We'll show you a live dashboard,
+                walk through offline collection, and answer every question your team has.
               </p>
 
               <ul className="mt-8 space-y-3">
@@ -86,7 +85,10 @@ function DemoPage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-6 bg-gradient-primary opacity-15 blur-3xl rounded-full" aria-hidden />
+              <div
+                className="absolute -inset-6 bg-gradient-primary opacity-15 blur-3xl rounded-full"
+                aria-hidden
+              />
               <div className="relative rounded-2xl border border-border bg-card p-7 md:p-9 shadow-elegant">
                 {!submitted ? (
                   <form onSubmit={onSubmit} className="space-y-5">
@@ -129,8 +131,8 @@ function DemoPage() {
                     </div>
                     <h3 className="mt-5 text-2xl font-semibold tracking-tight">Request received</h3>
                     <p className="mt-3 text-muted-foreground max-w-sm mx-auto">
-                      Thanks — a member of our team will reach out within one business
-                      day to schedule your personalized demo.
+                      Thanks — a member of our team will reach out within one business day to
+                      schedule your personalized demo.
                     </p>
                   </div>
                 )}
@@ -147,16 +149,36 @@ function DemoPage() {
             </h2>
             <div className="mt-10 space-y-3">
               {[
-                { q: "How long does the demo take?", a: "30 minutes. We spend the first 5 understanding your program, then walk you through a live dashboard mapped to your sector." },
-                { q: "Do I need to prepare anything?", a: "No. Bring questions. If you have an existing logframe or indicator list, share it ahead and we'll mock it inside Mandefied for the call." },
-                { q: "Can Mandefied match our donor's report template (e.g. AfDB)?", a: "Yes. Mandefied ships AfDB and SDG-aligned templates out of the box, and we configure custom donor templates during onboarding." },
-                { q: "What about offline / low-connectivity field sites?", a: "Field officers collect data fully offline on mobile. The app syncs automatically the moment connectivity returns — with full audit trail intact." },
-                { q: "How quickly can we go live?", a: "Most teams run a first program in 2–4 weeks, including logframe setup, indicator configuration, and field officer training." },
+                {
+                  q: "How long does the demo take?",
+                  a: "30 minutes. We spend the first 5 understanding your program, then walk you through a live dashboard mapped to your sector.",
+                },
+                {
+                  q: "Do I need to prepare anything?",
+                  a: "No. Bring questions. If you have an existing logframe or indicator list, share it ahead and we'll mock it inside Mandefied for the call.",
+                },
+                {
+                  q: "Can Mandefied match our donor's report template (e.g. AfDB)?",
+                  a: "Yes. Mandefied ships AfDB and SDG-aligned templates out of the box, and we configure custom donor templates during onboarding.",
+                },
+                {
+                  q: "What about offline / low-connectivity field sites?",
+                  a: "Field officers collect data fully offline on mobile. The app syncs automatically the moment connectivity returns — with full audit trail intact.",
+                },
+                {
+                  q: "How quickly can we go live?",
+                  a: "Most teams run a first program in 2–4 weeks, including logframe setup, indicator configuration, and field officer training.",
+                },
               ].map((f) => (
-                <details key={f.q} className="group rounded-xl border border-border bg-card p-5 open:shadow-soft transition-shadow">
+                <details
+                  key={f.q}
+                  className="group rounded-xl border border-border bg-card p-5 open:shadow-soft transition-shadow"
+                >
                   <summary className="cursor-pointer list-none flex items-center justify-between font-semibold text-foreground">
                     <span>{f.q}</span>
-                    <span className="ml-4 h-7 w-7 rounded-full bg-gradient-to-br from-[oklch(0.5_0.24_260)] to-[oklch(0.62_0.24_350)] text-white flex items-center justify-center text-sm transition-transform group-open:rotate-45">+</span>
+                    <span className="ml-4 h-7 w-7 rounded-full bg-gradient-to-br from-[oklch(0.5_0.24_260)] to-[oklch(0.62_0.24_350)] text-white flex items-center justify-center text-sm transition-transform group-open:rotate-45">
+                      +
+                    </span>
                   </summary>
                   <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{f.a}</p>
                 </details>
