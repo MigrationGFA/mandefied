@@ -59,13 +59,13 @@ export function DashboardPreview() {
             <MapPin className="h-4 w-4 text-primary" />
             <p className="text-sm font-semibold">Field activity</p>
           </div>
-          <p className="text-xs text-muted-foreground">Live submissions across regions</p>
+          <p className="text-xs text-muted-foreground">Live submissions across operational zones</p>
           <MapMock />
           <ul className="mt-4 space-y-2">
             {[
-              { region: "Ekiti Central", count: 142, tone: "success" },
-              { region: "Ado-Ekiti", count: 88, tone: "info" },
-              { region: "Ikere", count: 41, tone: "warning" },
+              { region: "North Region", count: 142, tone: "success" },
+              { region: "Central Region", count: 88, tone: "info" },
+              { region: "South Region", count: 41, tone: "warning" },
             ].map((r) => (
               <li key={r.region} className="flex items-center justify-between text-sm">
                 <span className="flex items-center gap-2">

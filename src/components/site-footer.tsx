@@ -20,8 +20,8 @@ export function SiteFooter() {
               <span className="text-lg font-semibold tracking-tight">Mandefied</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-sm leading-relaxed">
-              The operating system for impact. Real-time monitoring & evaluation for governments,
-              NGOs, and enterprises.
+              The Operating System for Performance, Accountability and Measurable Impact. Trusted by
+              governments, development organizations, NGOs and enterprises.
             </p>
             <div className="mt-6 flex items-center gap-3">
               {[Linkedin, Twitter, Github].map((Icon, i) => (
@@ -67,8 +67,10 @@ export function SiteFooter() {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Mandefied. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground">
-            Aligned with SDG and AfDB reporting standards.
+          <p className="text-xs text-muted-foreground max-w-xl text-right">
+            Built for governments, development organizations, NGOs and enterprises. Aligned with
+            SDGs, international monitoring & evaluation best practices and institutional reporting
+            frameworks.
           </p>
         </div>
       </div>

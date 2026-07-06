@@ -30,7 +30,11 @@ const SLIDES = [
     alt: "Live field officer submissions on a regional activity map",
     label: "Field Activity",
   },
-  { src: reportsImg, alt: "Auto-generated funder-ready reports in AfDB format", label: "Reports" },
+  {
+    src: reportsImg,
+    alt: "Auto-generated development partner and funder-ready reports",
+    label: "Reports",
+  },
 ];
 
 export function Hero() {
@@ -42,7 +46,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 backdrop-blur px-3.5 py-1.5 text-xs font-medium shadow-soft">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
             <span className="text-muted-foreground">
-              Powering Ekiti Knowledge Zone & AfDB-grade reporting
+              Powering Government Transformation & Development Programmes
             </span>
           </div>
 
@@ -52,8 +56,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Mandefied is a real-time monitoring & evaluation platform that helps governments, NGOs,
-            and enterprises track performance, measure outcomes, and generate funder-ready reports.
+            Trusted by governments, development agencies and implementing partners to monitor
+            projects, measure outcomes and deliver transparent, funder-ready reporting.
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">

@@ -17,7 +17,7 @@ export const Route = createFileRoute("/features")({
       {
         name: "description",
         content:
-          "Logframes, KPIs, offline mobile collection, real-time dashboards, automated AfDB-ready reports, audit trails, role-based access and SDG tracking — all in one platform.",
+          "Logframes, KPIs, offline mobile collection, real-time dashboards, automated development-partner reports, audit trails, role-based access and SDG tracking — all in one platform.",
       },
       { property: "og:title", content: "Features — Mandefied M&E Platform" },
       {
@@ -46,7 +46,7 @@ const pillars = [
   {
     icon: Zap,
     title: "Real-time, always",
-    body: "Field officer presses submit → indicator updates → dashboard refreshes → funder report is recalculated. In seconds.",
+    body: "Field officer presses submit → indicator updates → dashboard refreshes → institutional report is recalculated. In seconds.",
     tone: "from-[oklch(0.7_0.21_28)] to-[oklch(0.62_0.24_350)]",
   },
   {
@@ -66,7 +66,7 @@ const comparison = [
     generic: "Limited",
   },
   { capability: "Real-time indicator roll-ups", us: true, sheets: false, generic: "Limited" },
-  { capability: "AfDB / SDG-aligned report templates", us: true, sheets: false, generic: false },
+  { capability: "Institutional & SDG Reporting Templates", us: true, sheets: false, generic: false },
   { capability: "Multi-tier M&E approval workflow", us: true, sheets: false, generic: false },
   {
     capability: "Immutable audit trail per indicator value",
@@ -102,7 +102,7 @@ function FeaturesPage() {
                 you'll ever need.
               </>
             }
-            description="Mandefied brings the entire monitoring & evaluation lifecycle under one roof — purpose-built for the realities of donor-funded, multi-stakeholder programs."
+            description="Mandefied brings the entire monitoring, evaluation, learning and performance management lifecycle under one platform—purpose-built for governments, development agencies, NGOs, enterprises and multi-stakeholder programmes."
           />
           <div className="mt-10 flex justify-center">
             <Link to="/demo">

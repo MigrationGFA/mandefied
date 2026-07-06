@@ -6,22 +6,21 @@ import { UseCases } from "@/components/use-cases-grid";
 import { CtaBanner } from "@/components/cta-banner";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Quote } from "lucide-react";
-import dayoImg from "@/assets/testimonial-dayo.jpg";
 
 export const Route = createFileRoute("/use-cases")({
   head: () => ({
     meta: [
-      { title: "Use Cases — Mandefied for Government, NGOs, Donors & Enterprise" },
+      { title: "Use Cases — Mandefied for Government, NGOs & Enterprise" },
       {
         name: "description",
         content:
-          "From AfDB-funded development programs and ministry KPIs to healthcare logistics and infrastructure projects — see how teams use Mandefied to prove impact.",
+          "Mandefied powers mission-critical programmes across governments, development organizations, NGOs, enterprises and public institutions.",
       },
       { property: "og:title", content: "Use Cases — Mandefied" },
       {
         property: "og:description",
         content:
-          "From AfDB-funded programs to ministry KPIs and field health workflows — see how Mandefied adapts to any industry.",
+          "Mandefied helps governments, development organizations, NGOs and enterprises transform programme data into measurable impact.",
       },
     ],
   }),
@@ -31,19 +30,19 @@ export const Route = createFileRoute("/use-cases")({
 const stories = [
   {
     sector: "Economic Development",
-    title: "Ekiti Knowledge Zone",
-    body: "A flagship economic development zone uses Mandefied to track infrastructure milestones, beneficiary enrollment, and AfDB indicator progress in real time across multiple work-streams.",
+    title: "Government Economic Development Programme",
+    body: "Mandefied supports the monitoring of large-scale economic development initiatives, tracking infrastructure delivery, enterprise support, investment promotion, beneficiary engagement and programme performance across multiple implementation teams.",
     metrics: [
-      { v: "115k+", k: "Beneficiaries tracked" },
-      { v: "₦1.2B", k: "Funding monitored" },
-      { v: "12", k: "Active work-streams" },
+      { v: "115,000+", k: "Beneficiaries monitored" },
+      { v: "Multi-billion naira", k: "Programme value tracked" },
+      { v: "12+", k: "Active implementation workstreams" },
     ],
     tone: "from-[oklch(0.42_0.14_155)] via-[oklch(0.5_0.24_260)] to-[oklch(0.62_0.24_350)]",
   },
   {
     sector: "Public Health",
     title: "Community health network",
-    body: "Field officers submit visit data offline from rural clinics. Supervisors validate within 24 hours; outbreak indicators feed straight into ministry dashboards.",
+    body: "Healthcare workers collect field data offline from primary and secondary healthcare facilities while supervisors validate submissions in real time for operational reporting and decision-making.",
     metrics: [
       { v: "8.5k", k: "Patient touchpoints / mo" },
       { v: "94%", k: "Submissions validated < 24h" },
@@ -52,13 +51,13 @@ const stories = [
     tone: "from-[oklch(0.7_0.21_28)] via-[oklch(0.62_0.24_350)] to-[oklch(0.5_0.24_260)]",
   },
   {
-    sector: "Skills & Employment",
+    sector: "Education & Workforce Development",
     title: "Youth employment initiative",
-    body: "Tracks 120 km of rural roads constructed and 8,500 trained youths from intake to 12-month post-program outcome — all rolled up into a single SDG-tagged indicator dashboard.",
+    body: "Track vocational training, employment initiatives, infrastructure delivery and long-term programme outcomes through integrated performance dashboards and SDG-aligned indicators.",
     metrics: [
-      { v: "8,500", k: "Trained youths" },
-      { v: "120 km", k: "Roads constructed" },
-      { v: "On Track", k: "Funder status" },
+      { v: "8,500+", k: "Participants tracked" },
+      { v: "120 km", k: "Infrastructure monitored" },
+      { v: "On Track", k: "Programme Performance" },
     ],
     tone: "from-[oklch(0.78_0.22_140)] via-[oklch(0.42_0.14_155)] to-[oklch(0.5_0.24_260)]",
   },
@@ -66,16 +65,19 @@ const stories = [
 
 const testimonials = [
   {
-    q: "What used to be a three-week reporting scramble now takes us a single afternoon. Our M&E officers can finally focus on insight, not data wrangling.",
-    name: "Dayo Adeoye",
-    role: "Programme Director, Ekiti Knowledge Zone",
-    img: dayoImg,
+    q: "What once took weeks of manual reporting is now completed in a matter of hours. Our teams spend less time compiling data and more time improving programme performance.",
+    title: "Programme Director",
+    org: "Government Development Programme",
   },
   {
-    q: "We finally trust the numbers. Every single value on our dashboard is traceable back to a field officer, a GPS pin, and a timestamp.",
-    name: "Head of M&E",
-    role: "Public Sector Development Programme",
-    img: null,
+    q: "Every figure on our dashboard is supported by verifiable field evidence, giving management complete confidence in our reporting and decision-making.",
+    title: "Head of Monitoring & Evaluation",
+    org: "Public Sector Institution",
+  },
+  {
+    q: "Mandefied has transformed how we manage projects across multiple locations. We now have one trusted source of truth for every programme.",
+    title: "Programme Manager",
+    org: "Development Organisation",
   },
 ];
 
@@ -89,26 +91,32 @@ function UseCasesPage() {
             eyebrow="Industries"
             title={
               <>
-                Built for the people who{" "}
-                <span className="text-gradient-spectrum">deliver change</span>.
+                Built for organizations that{" "}
+                <span className="text-gradient-spectrum">measure, manage and deliver impact</span>.
               </>
             }
-            description="Mandefied is in production today across public sector, donor-funded development, and enterprise programs. Here's how teams use it."
+            description="Mandefied powers mission-critical programmes across governments, development organizations, NGOs, enterprises and public institutions. Whether you're managing infrastructure, healthcare, education or economic development initiatives, Mandefied adapts to your programme—not the other way around."
           />
+          <p className="mt-6 max-w-3xl mx-auto text-center text-muted-foreground leading-relaxed">
+            Mandefied helps governments, development organizations, NGOs and enterprises transform
+            programme data into measurable impact. From field data collection and performance
+            monitoring to executive dashboards and automated reporting, every outcome is verifiable,
+            traceable and decision-ready.
+          </p>
         </Section>
 
         <UseCases />
 
-        {/* Customer stories */}
         <Section className="bg-surface">
           <SectionHeading
             eyebrow="In production"
             title={
               <>
-                Real programs. <span className="text-gradient-warm">Real results.</span>
+                Built for complex programmes.{" "}
+                <span className="text-gradient-warm">Proven across sectors.</span>
               </>
             }
-            description="A snapshot of how organizations use Mandefied in the field today."
+            description="Organizations use Mandefied to manage complex initiatives, monitor performance and generate reliable evidence for decision-making and accountability."
           />
 
           <div className="mt-16 grid lg:grid-cols-3 gap-5">
@@ -144,9 +152,8 @@ function UseCasesPage() {
           </div>
         </Section>
 
-        {/* Testimonials */}
         <Section>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <div
                 key={i}
@@ -155,21 +162,10 @@ function UseCasesPage() {
                 <Quote className="absolute top-6 right-6 h-10 w-10 text-primary/15" />
                 <p className="text-lg leading-relaxed text-foreground">"{t.q}"</p>
                 <div className="mt-6 flex items-center gap-3">
-                  {t.img ? (
-                    <img
-                      src={t.img}
-                      alt={`${t.name}, ${t.role}`}
-                      width={48}
-                      height={48}
-                      loading="lazy"
-                      className="h-12 w-12 rounded-full object-cover ring-2 ring-border"
-                    />
-                  ) : (
-                    <div className="h-12 w-12 rounded-full bg-gradient-spectrum" aria-hidden />
-                  )}
+                  <div className="h-12 w-12 rounded-full bg-gradient-spectrum" aria-hidden />
                   <div>
-                    <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.role}</p>
+                    <p className="text-sm font-semibold text-foreground">{t.title}</p>
+                    <p className="text-xs text-muted-foreground">{t.org}</p>
                   </div>
                 </div>
               </div>

@@ -38,7 +38,7 @@ const features = [
   {
     icon: FileBarChart,
     title: "Automated Reporting",
-    body: "Quarterly, annual, and AfDB-template reports generated on demand — no copy-paste.",
+    body: "Generate quarterly, annual and customised institutional reports automatically—without manual compilation or copy-and-paste.",
     tone: "lime",
   },
   {
@@ -79,7 +79,7 @@ export function FeaturesGrid() {
             Everything you need to <span className="text-gradient-spectrum">prove impact</span>.
           </>
         }
-        description="A complete M&E stack — purpose-built for the realities of field-driven, donor-funded, multi-stakeholder programs."
+        description="A complete monitoring and evaluation platform designed for complex programmes, institutional performance management and results-based reporting."
       />
 
       <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

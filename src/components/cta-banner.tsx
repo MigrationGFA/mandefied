@@ -17,8 +17,9 @@ export function CtaBanner() {
               See Mandefied in action.
             </h2>
             <p className="mt-5 text-lg text-primary-foreground/85 leading-relaxed">
-              Book a personalized 30-minute demo. We'll show you a live dashboard tailored to your
-              program and answer every question your team has.
+              Book a personalized 30-minute demonstration and discover how Mandefied can streamline
+              monitoring, automate reporting and provide real-time visibility into your programmes,
+              projects and organizational performance.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Link to="/demo">

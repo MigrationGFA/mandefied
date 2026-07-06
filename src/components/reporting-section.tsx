@@ -14,7 +14,7 @@ export function ReportingSection() {
             <div className="flex items-center justify-between px-5 py-3 border-b border-border bg-surface">
               <div className="flex items-center gap-2">
                 <FileText className="h-4 w-4 text-primary" />
-                <p className="text-sm font-semibold">Q3 2025 — AfDB Quarterly Report</p>
+                <p className="text-sm font-semibold">Q3 2025 — Development Programme Performance Report</p>
               </div>
               <span className="text-[10px] font-mono uppercase text-muted-foreground">
                 Auto-generated
@@ -57,16 +57,16 @@ export function ReportingSection() {
             Reporting
           </div>
           <h2 className="mt-5 text-3xl md:text-5xl font-semibold tracking-tight">
-            From raw data to <span className="text-gradient-primary">funder-ready reports</span> in
+            From raw data to <span className="text-gradient-primary">decision-ready reports</span> in
             minutes.
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Mandefied generates monthly, quarterly, and annual reports automatically — in the exact
-            templates your funders expect.
+            Mandefied automatically generates monthly, quarterly and annual reports in formats
+            aligned with government, institutional and development partner reporting requirements.
           </p>
           <ul className="mt-7 space-y-3">
             {[
-              "Pre-built AfDB, World Bank, EU and SDG report templates",
+              "Pre-built templates for institutional reporting, development programmes, SDG tracking and performance management",
               "PDF & Excel export with branded covers and signatures",
               "Narrative auto-fill from approved indicator commentary",
               "Schedule and distribute to stakeholders on a cadence",

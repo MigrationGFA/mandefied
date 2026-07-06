@@ -37,8 +37,8 @@ export function IntegritySection() {
             <span className="text-gradient-primary">Designed for trust.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            When funders ask "how do you know?", Mandefied gives you the chain of evidence —
-            automatically, for every reported number.
+            When auditors, regulators or stakeholders ask "How was this result achieved?", Mandefied
+            provides a complete chain of evidence for every reported outcome.
           </p>
         </div>
         <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">

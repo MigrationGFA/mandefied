@@ -16,7 +16,7 @@ export const Route = createFileRoute("/demo")({
       {
         name: "description",
         content:
-          "Book a personalized 30-minute demo of Mandefied tailored to your program. See real-time dashboards, offline data collection, and AfDB-ready reporting in action.",
+          "Book a personalized 30-minute demo of Mandefied tailored to your program. See real-time dashboards, offline data collection, and development-partner reporting in action.",
       },
       { property: "og:title", content: "Request a Demo — Mandefied" },
       {
@@ -59,7 +59,7 @@ function DemoPage() {
                 {[
                   "Live dashboard tailored to your sector",
                   "Offline data collection walkthrough",
-                  "AfDB / SDG report generation in real time",
+                  "Development partner & SDG report generation in real time",
                   "Pricing for your team size",
                 ].map((t) => (
                   <li key={t} className="flex gap-3 text-foreground">
@@ -158,8 +158,8 @@ function DemoPage() {
                   a: "No. Bring questions. If you have an existing logframe or indicator list, share it ahead and we'll mock it inside Mandefied for the call.",
                 },
                 {
-                  q: "Can Mandefied match our donor's report template (e.g. AfDB)?",
-                  a: "Yes. Mandefied ships AfDB and SDG-aligned templates out of the box, and we configure custom donor templates during onboarding.",
+                  q: "Can Mandefied match our donor's report template?",
+                  a: "Yes. Mandefied ships development finance institution and SDG-aligned templates out of the box, and we configure custom donor templates during onboarding.",
                 },
                 {
                   q: "What about offline / low-connectivity field sites?",

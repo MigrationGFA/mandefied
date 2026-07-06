@@ -11,11 +11,11 @@ import { ArrowRight, Clock, TrendingUp, FileCheck } from "lucide-react";
 export const Route = createFileRoute("/how-it-works")({
   head: () => ({
     meta: [
-      { title: "How it works — From field data to funder report | Mandefied" },
+      { title: "How it works — From programme planning to executive reporting | Mandefied" },
       {
         name: "description",
         content:
-          "See the full Mandefied workflow: define the logframe, attach indicators, collect offline field data, validate through M&E approval, and generate live dashboards & AfDB reports.",
+          "See the complete performance management and monitoring lifecycle: design programmes, define indicators, capture field data, validate results and generate institutional reports.",
       },
       { property: "og:title", content: "How Mandefied works" },
       {
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/how-it-works")({
 const before = [
   "Spreadsheets emailed back and forth weekly",
   "Field paper forms re-typed (and lost)",
-  "Funder reports rebuilt by hand every quarter",
+  "Quarterly and annual reports manually compiled from multiple spreadsheets",
   "Numbers no one can fully trace or trust",
   "Approvals stuck in WhatsApp threads",
 ];
@@ -39,7 +39,7 @@ const before = [
 const after = [
   "Live dashboard auto-updates from every submission",
   "Mobile, offline-capable forms with GPS + photo evidence",
-  "AfDB-template reports generated in minutes",
+  "Institutional and programme reports generated automatically in minutes",
   "Every value signed by person, place, time, device",
   "Multi-tier approval flow built into the platform",
 ];
@@ -75,10 +75,11 @@ function HowPage() {
             eyebrow="How it works"
             title={
               <>
-                The full M&E loop, <span className="text-gradient-spectrum">in one platform</span>.
+                The complete performance management and monitoring lifecycle—{" "}
+                <span className="text-gradient-spectrum">on one intelligent platform</span>.
               </>
             }
-            description="From the first logframe entry to the funder report — every step connected, traceable, and real-time."
+            description="From programme planning to executive reporting, every activity, indicator and result is connected, verifiable and available in real time."
           />
         </Section>
 
@@ -143,7 +144,7 @@ function HowPage() {
                 <span className="text-gradient-spectrum">measure differently</span>
               </>
             }
-            description="Indicative results from teams who have moved their M&E onto Mandefied."
+            description="Typical operational improvements experienced by organizations using Mandefied to manage programme performance and results."
           />
           <div className="mt-14 grid md:grid-cols-3 gap-5">
             {outcomes.map((o) => (
@@ -175,8 +176,8 @@ function HowPage() {
               Want to see this on your own program?
             </h3>
             <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-              We'll set up a 30-minute walkthrough using your sector, your indicators, and your
-              funder's report template.
+              We'll tailor a live 30-minute walkthrough around your sector, reporting framework,
+              performance indicators and organizational objectives.
             </p>
             <Link to="/demo" className="inline-block mt-7">
               <Button
