@@ -9,17 +9,10 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import dashboardImg from "@/assets/dashboard-hero.jpg";
 import indicatorsImg from "@/assets/dashboard-indicators.jpg";
 import fieldmapImg from "@/assets/dashboard-fieldmap.jpg";
-import reportsImg from "@/assets/dashboard-reports.jpg";
 
 const SLIDES = [
-  {
-    src: dashboardImg,
-    alt: "Mandefied real-time dashboard with KPIs, charts, and project map",
-    label: "Overview",
-  },
   {
     src: indicatorsImg,
     alt: "Indicator and KPI tracking against targets with SDG alignment",
@@ -29,11 +22,6 @@ const SLIDES = [
     src: fieldmapImg,
     alt: "Live field officer submissions on a regional activity map",
     label: "Field Activity",
-  },
-  {
-    src: reportsImg,
-    alt: "Auto-generated development partner and funder-ready reports",
-    label: "Reports",
   },
 ];
 
